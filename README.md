@@ -11,7 +11,8 @@ My goal is to build practical knowledge and analytical thinking required for mal
 ## Contents
 
 ### TryHackMe Learning Logs
-
+- Hands-on exercises
+- Key takeaways and reflections
 
 ### Technical Books & Hands-on Practice
 - Study notes from technical books
