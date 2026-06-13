@@ -1,4 +1,4 @@
-#include <stdio.h> // <stdio.h>をインクルード
+#include <stdio.h> // <stdio.h>をインクルード、これは標準的な入出力を行う機能を備えるヘッダー
 
 int main(void) // main関数の定義
 {
