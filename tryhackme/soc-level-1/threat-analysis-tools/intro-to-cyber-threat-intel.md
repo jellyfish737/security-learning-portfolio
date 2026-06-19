@@ -173,3 +173,44 @@ WIP
     - IOCは信頼度に応じて優先順位を付ける
     - 情報は適切な相手へ適切な形式で共有する
     - 効果測定を行い、継続的に改善する（PDCAサイクル）
+ 
+---
+- MITRE ATT&CK
+    - 攻撃者の戦術（Tactic）・技術（Technique）を体系化したフレームワーク
+    - 攻撃手法を共通のID（例：T1059.001 PowerShell）で表現できる
+    - アラートやインシデントをATT&CKへ対応付けることで、攻撃内容をチーム間で共通認識として共有できる
+    - インシデント対応や脅威ハンティングでも広く利用される
+- MITRE D3FEND
+    - 防御技術や対策を体系化したフレームワーク
+    - ATT&CKが「攻撃」、D3FENDが「防御」を整理している
+    - ATT&CKで確認した攻撃手法に対し、実施すべき防御策を検討する際に活用する
+- Cyber Kill Chain
+    - 攻撃者の行動を7段階に分類した攻撃モデル
+    - 攻撃がどの段階まで進行しているかを把握できる
+    - 主な流れ
+        - Reconnaissance（偵察）
+        - Weaponization（武器化）
+        - Delivery（配送）
+        - Exploitation（悪用）
+        - Installation（インストール）
+        - Command and Control（C2）
+        - Actions on Objectives（目的達成）
+- CVE（Common Vulnerabilities and Exposures）
+    - 公開された脆弱性に付与される一意の識別番号
+    - 脆弱性を共通の名称で管理・共有できる
+- CVSS（Common Vulnerability Scoring System）
+    - 脆弱性の重大度を0～10で数値化する評価基準
+    - スコアが高いほど優先的な対応が必要となる
+- NVD（National Vulnerability Database）
+    - CVEの詳細情報を提供する公式データベース
+    - CVSSスコアや影響を受ける製品、関連情報を確認できる
+- STIX（Structured Threat Information Expression）
+    - 脅威インテリジェンスを機械可読な形式で表現する標準フォーマット
+    - IOCや攻撃者情報をツール間で共有しやすくする
+- TAXII（Trusted Automated eXchange of Indicator Information）
+    - STIX形式の脅威インテリジェンスを安全かつ自動的に共有するための通信プロトコル
+    - 最新のIOCや脅威情報をリアルタイムで取得・配信できる
+- 脅威インテリジェンス共有のポイント
+    - IOCを共有することで、他組織の攻撃情報を自組織の防御へ迅速に活用できる
+    - 共有前には、機密情報・個人情報・契約（NDA）などを考慮する必要がある
+    - IOCを公開することで攻撃者に検知を気付かせるリスクもあるため、共有範囲には注意する
