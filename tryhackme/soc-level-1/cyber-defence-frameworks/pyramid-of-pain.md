@@ -96,3 +96,28 @@ WIP
     - マルウェアが作成・配置したファイル
     - IOC（Indicators of Compromise：侵害指標）
     - 特定の攻撃やマルウェアに固有の痕跡
+ 
+---
+- ネットワークアーティファクト（Network Artifacts）
+    - 攻撃者がネットワーク通信上に残す痕跡
+    - Pyramid of Painでは黄色のゾーンに分類され、検知・対策されると攻撃者はツールや手法の変更を迫られる
+- 主なネットワークアーティファクト
+    - User-Agent文字列
+    - C2（Command and Control）サーバーとの通信
+    - HTTP POSTリクエストのURIパターン
+    - その他、不審なネットワーク通信
+- User-Agent
+    - HTTPリクエストに含まれる、クライアントの情報を表すヘッダー
+    - マルウェアは通常とは異なるUser-Agentを使用することがあり、検知の手掛かりになる
+- 調査方法
+    - PCAPファイルを解析し、通信内容を確認する
+    - WiresharkやTSharkでHTTP通信やUser-Agentを分析する
+    - IDS（例：Snort）のアラートから不審な通信を調査する
+- TSharkでUser-Agentを抽出
+    
+    ```bash
+    tshark -Y http.request -T fields -e http.host -e http.user_agent -r analysis_file.pcap
+    ```
+---
+
+
